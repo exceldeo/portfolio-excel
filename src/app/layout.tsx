@@ -1,9 +1,16 @@
+'use client';
+import AOS from 'aos';
 import { Metadata } from 'next';
+import { ThemeProvider } from 'next-themes';
 import * as React from 'react';
 
 import '@/styles/globals.css';
 // !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
 import '@/styles/colors.css';
+import 'aos/dist/aos.css';
+
+import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
 
 import { siteConfig } from '@/constant/config';
 
@@ -53,9 +60,18 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  React.useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <html>
-      <body>{children}</body>
+      <body>
+        <ThemeProvider enableColorScheme={true} attribute='class'>
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

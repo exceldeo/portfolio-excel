@@ -5,7 +5,6 @@ import * as React from 'react';
 
 import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
-import UnderlineLink from '@/components/links/UnderlineLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
 
 /**
@@ -27,7 +26,7 @@ export default function HomePage() {
       <Head>
         <title>Hi</title>
       </Head>
-      <section className='bg-white'>
+      <section className='dark:bg-stone-500'>
         <div className='layout relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
           <Logo className='w-16' />
           <h1 className='mt-4'>Next.js + Tailwind CSS + TypeScript Starter</h1>
@@ -57,13 +56,6 @@ export default function HomePage() {
               alt='Deploy with Vercel'
             />
           </UnstyledLink>
-
-          <footer className='absolute bottom-2 text-gray-700'>
-            © {new Date().getFullYear()} By{' '}
-            <UnderlineLink href='https://theodorusclarence.com?ref=tsnextstarter'>
-              Theodorus Clarence
-            </UnderlineLink>
-          </footer>
         </div>
       </section>
     </main>
