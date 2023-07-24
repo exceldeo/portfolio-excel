@@ -1,5 +1,4 @@
 'use client';
-import AOS from 'aos';
 import { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
 import * as React from 'react';
@@ -7,7 +6,6 @@ import * as React from 'react';
 import '@/styles/globals.css';
 // !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
 import '@/styles/colors.css';
-import 'aos/dist/aos.css';
 
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
@@ -45,14 +43,14 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     images: [`${siteConfig.url}/images/og.jpg`],
-    // creator: '@th_clarence',
+    creator: '@th_clarence',
   },
-  // authors: [
-  //   {
-  //     name: 'Theodorus Clarence',
-  //     url: 'https://theodorusclarence.com',
-  //   },
-  // ],
+  authors: [
+    {
+      name: 'Excel Deo',
+      url: 'https://exceldeo.com',
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -60,15 +58,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  React.useEffect(() => {
-    AOS.init();
-  }, []);
   return (
     <html>
       <body>
         <ThemeProvider enableColorScheme={true} attribute='class'>
           <Navbar />
-          {children}
+          <main className='mt-[100px]'>{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
