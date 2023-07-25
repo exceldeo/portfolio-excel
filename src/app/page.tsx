@@ -4,7 +4,9 @@ import Head from 'next/head';
 import * as React from 'react';
 
 import EducationSection from '@/sections/home/Education';
+import ExperienceSection from '@/sections/home/Experience';
 import HeroSection from '@/sections/home/Hero';
+import ProjectsSection from '@/sections/home/Projects';
 
 /**
  * SVGR Support
@@ -26,6 +28,8 @@ export default function HomePage() {
       </Head>
       <HeroSection />
       <EducationSection />
+      <ExperienceSection />
+      <ProjectsSection />
     </>
   );
 }

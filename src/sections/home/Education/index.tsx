@@ -5,7 +5,7 @@ import EducationCard from '@/components/card/educationCard';
 
 const EducationSection = () => {
   return (
-    <section className='container mx-auto px-10' id='education'>
+    <section className='container mx-auto mt-[100px] px-10 py-4' id='education'>
       <h1 className='text-4xl font-bold text-stone-900 dark:text-stone-50'>
         Education
       </h1>

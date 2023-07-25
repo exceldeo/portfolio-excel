@@ -3,10 +3,12 @@ import React from 'react';
 
 import Button from '@/components/buttons/Button';
 
+import SkillSection from '@/sections/home/Hero/Skill';
+
 function HeroSection() {
   return (
     <section id='home' className=' p-5 dark:bg-stone-500'>
-      <div className='flex  '>
+      <div className='flex'>
         <div className='mx-auto grid w-2/5 content-center '>
           <h1 className='text-7xl font-bold text-stone-900 dark:text-stone-50'>
             Hi, I'm <span className='text-primary-700'>Excel Deo</span>
@@ -33,6 +35,7 @@ function HeroSection() {
           />
         </div>
       </div>
+      <SkillSection />
     </section>
   );
 }
