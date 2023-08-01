@@ -38,15 +38,9 @@ const SkillSection = () => {
   return (
     <section
       id='tech-stack'
-      className='container relative z-20 mx-auto min-h-[15rem] px-3 md:min-h-[10rem]'
+      className='w-full relative z-20 mx-auto min-h-[15rem] md:min-h-[10rem]'
     >
-      <div className='mb-2 flex w-full justify-end text-center text-sm font-light md:text-base'>
-        <p>
-          <span className='font-normal text-rose-500'>*)</span> I work with a
-          lot of stuff
-        </p>
-      </div>
-      <div className='absolute w-full pr-4'>
+      <div className='absolute w-full'>
         <motion.div
           variants={{
             offscreen: {
@@ -72,7 +66,7 @@ const SkillSection = () => {
             once: false,
             amount: 0.2,
           }}
-          className='bg-warm-gray-100 dark:bg-warm-gray-800 border-warm-gray-400 dark:border-warm-gray-600 z-30 mr-3 min-w-full rounded-lg border p-8 shadow-lg'
+          className='bg-warm-gray-100 dark:bg-warm-gray-800 border-warm-gray-400 dark:border-warm-gray-600 z-30 min-w-full  border-t p-8 shadow-lg'
         >
           <h2 className='z-20 text-center text-3xl font-normal'>
             Tech I&apos;ve tinkered with

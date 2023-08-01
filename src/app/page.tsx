@@ -1,6 +1,5 @@
 'use client';
 
-import Head from 'next/head';
 import * as React from 'react';
 
 import EducationSection from '@/sections/home/Education';
@@ -21,15 +20,16 @@ import ProjectsSection from '@/sections/home/Projects';
 // to customize the default configuration.
 
 export default function HomePage() {
+
   return (
     <>
-      <Head>
-        <title>Hi</title>
-      </Head>
       <HeroSection />
       <EducationSection />
       <ExperienceSection />
+      <div className='pt-4'>
       <ProjectsSection />
+
+      </div>
     </>
   );
 }

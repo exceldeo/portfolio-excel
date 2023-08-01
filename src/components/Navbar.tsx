@@ -14,7 +14,7 @@ function Navbar() {
   let duration = 0.1;
 
   return (
-    <header className='border-sto fixed top-0 z-50 mx-auto  w-full px-4 shadow dark:border-b dark:border-stone-200 dark:bg-stone-800'>
+    <header className='border-sto fixed top-0 z-50 mx-auto  w-full px-4 shadow dark:border-b dark:border-stone-200 dark:bg-stone-800 backdrop-blur-xl bg-white/30'>
       <div className='justify-between md:flex md:items-center'>
         <div className='flex items-center justify-between py-3'>
           <div className='md:block md:py-5'>
