@@ -1,0 +1,4 @@
+/* Toggle A */
+input:checked ~ .dot {
+  transform: translateX(100%);
+}

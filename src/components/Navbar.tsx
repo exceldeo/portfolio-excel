@@ -3,9 +3,10 @@ import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import React, { useState } from 'react';
 import { IoMdClose, IoMdMenu } from 'react-icons/io';
-import { RiMoonFill, RiSunLine } from 'react-icons/ri';
 
 import NAV_ITEMS from '@/data/navbarData';
+
+import ToggleButton from '@/components/buttons/ToggleButtonTheme';
 
 function Navbar() {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -14,7 +15,7 @@ function Navbar() {
   let duration = 0.1;
 
   return (
-    <header className='border-sto fixed top-0 z-50 mx-auto  w-full px-4 shadow dark:border-b dark:border-stone-200 dark:bg-stone-800 backdrop-blur-xl bg-white/30'>
+    <header className='border-sto fixed top-0 z-50 mx-auto  w-full bg-white/30 px-4 shadow backdrop-blur-xl dark:border-b dark:border-stone-200 dark:bg-stone-800'>
       <div className='justify-between md:flex md:items-center'>
         <div className='flex items-center justify-between py-3'>
           <div className='md:block md:py-5'>
@@ -78,11 +79,12 @@ function Navbar() {
                   className='h-10 w-10 rounded-full bg-gray-200 p-3 dark:bg-gray-800'
                   onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                 >
-                  {currentTheme === 'dark' ? (
+                  {/* {currentTheme === 'dark' ? (
                     <RiSunLine color='black' size={20} />
                   ) : (
                     <RiMoonFill color='black' size={20} />
                   )}
+                  <ToggleButton /> */}
                 </button>
               </div>
             </motion.div>
@@ -103,19 +105,11 @@ function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <div className='text-right'>
-              <button
-                aria-label='Toggle Dark Mode'
-                type='button'
-                className='h-10 w-10 rounded-full bg-gray-200 p-3 dark:bg-gray-800'
-                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              >
-                {currentTheme === 'dark' ? (
-                  <RiSunLine color='black' size={20} />
-                ) : (
-                  <RiMoonFill color='black' size={20} />
-                )}
-              </button>
+            <div>
+              <ToggleButton
+                setChecked={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                checked={currentTheme === 'dark'}
+              />
             </div>
           </div>
         </div>

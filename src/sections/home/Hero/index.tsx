@@ -13,7 +13,7 @@ function HeroSection() {
           <h1 className='text-7xl font-bold text-stone-900 dark:text-stone-50'>
             Hi, I'm <span className='text-primary-700'>Excel Deo</span>
           </h1>
-          <h2 className='text-2xl font-medium text-stone-900 dark:text-stone-50'>
+          <h2 className='text-2xl font-medium text-stone-900 dark:text-white'>
             I'm a{' '}
             <span className='text-primary-400'>
               Fullstack Developer and Mobile Developer
