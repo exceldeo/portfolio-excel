@@ -2,11 +2,11 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import React, { useState } from 'react';
-import { IoMdClose, IoMdMenu } from 'react-icons/io';
 
 import NAV_ITEMS from '@/data/navbarData';
 
 import ToggleButton from '@/components/buttons/ToggleButtonTheme';
+import { MenuButton } from '@/components/menu/HamburgerMenuButton';
 
 function Navbar() {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -15,26 +15,31 @@ function Navbar() {
   let duration = 0.1;
 
   return (
-    <header className='border-sto fixed top-0 z-50 mx-auto  w-full bg-white/30 px-4 shadow backdrop-blur-xl dark:border-b dark:border-stone-200 dark:bg-stone-800'>
+    <header className='border-sto fixed top-0 z-50 mx-auto  w-full bg-white/30 px-4 shadow backdrop-blur-xl dark:border-b dark:border-stone-700 dark:bg-stone-800'>
       <div className='justify-between md:flex md:items-center'>
         <div className='flex items-center justify-between py-3'>
           <div className='md:block md:py-5'>
             <h2 className='text-2xl font-bold'>DE Studio</h2>
           </div>
           <div className='md:hidden'>
-            <button onClick={() => setNavbar(!navbar)}>
-              {navbar ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}
-            </button>
+            <MenuButton
+              isOpen={navbar}
+              onClick={() => setNavbar(!navbar)}
+              strokeWidth='3'
+              color={currentTheme === 'dark' ? '#fff' : '#000'}
+              lineProps={{ strokeLinecap: 'round' }}
+              transition={{ type: 'spring', stiffness: 260, damping: 20 }}
+            />
           </div>
         </div>
 
         <div
           className={`mt-8 flex-1 justify-self-center pb-3 md:mt-0 md:block md:pb-0 ${
-            navbar ? 'block  dark:bg-stone-700' : 'hidden'
+            navbar ? 'block  ' : 'hidden'
           }`}
         >
           <div
-            className={`items-center justify-end space-y-6  bg-white opacity-95 md:hidden
+            className={`items-center justify-end space-y-6  opacity-95 md:hidden
               md:space-x-6 md:space-y-0
               `}
           >
@@ -53,7 +58,7 @@ function Navbar() {
               >
                 <Link
                   href={item.page}
-                  className='block text-right text-lg font-medium text-gray-600 hover:text-gray-900 dark:text-gray-50 dark:hover:text-white lg:mt-0 lg:inline-block
+                  className='block text-right text-lg font-medium text-gray-600 hover:text-gray-900 dark:text-gray-50 dark:hover:text-white lg:mt-0 lg:inline-block 
                   '
                   onClick={() => setNavbar(false)}
                 >
@@ -61,33 +66,13 @@ function Navbar() {
                 </Link>
               </motion.div>
             ))}
-            <motion.div
-              animate={navbar ? 'open' : 'closed'}
-              variants={{
-                open: {
-                  opacity: 1,
-                  x: 0,
-                  transition: { duration: (duration += 0.1) },
-                },
-                closed: { opacity: 0, x: '-70%' },
-              }}
-            >
-              <div className='text-right'>
-                <button
-                  aria-label='Toggle Dark Mode'
-                  type='button'
-                  className='h-10 w-10 rounded-full bg-gray-200 p-3 dark:bg-gray-800'
-                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                >
-                  {/* {currentTheme === 'dark' ? (
-                    <RiSunLine color='black' size={20} />
-                  ) : (
-                    <RiMoonFill color='black' size={20} />
-                  )}
-                  <ToggleButton /> */}
-                </button>
-              </div>
-            </motion.div>
+            <div className='flex justify-end '>
+              <ToggleButton
+                className='w-[50px] '
+                setChecked={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                checked={currentTheme === 'dark'}
+              />
+            </div>
           </div>
           <div
             className={`hidden items-center justify-end space-y-6  border-white md:flex md:space-x-6 md:space-y-0 
