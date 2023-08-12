@@ -9,7 +9,6 @@ import '@/styles/colors.css';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
-
 export default function RootLayout({
   header,
   children,
@@ -19,11 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html>
-{header}
+      {header}
       <body>
         <ThemeProvider enableColorScheme={true} attribute='class'>
           <Navbar />
-          <main className='mt-[100px]'>{children}</main>
+          <main className='w-full'>{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
