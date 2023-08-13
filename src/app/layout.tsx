@@ -6,6 +6,7 @@ import '@/styles/globals.css';
 // !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
 import '@/styles/colors.css';
 
+import ScrollButton from '@/components/buttons/ScrollButton';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
@@ -24,6 +25,7 @@ export default function RootLayout({
           <Navbar />
           <main className='w-full'>{children}</main>
           <Footer />
+          <ScrollButton />
         </ThemeProvider>
       </body>
     </html>

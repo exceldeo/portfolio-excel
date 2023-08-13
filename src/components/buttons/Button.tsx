@@ -6,15 +6,17 @@ import { ImSpinner2 } from 'react-icons/im';
 import { cn } from '@/lib/utils';
 
 const ButtonVariant = ['primary', 'outline', 'ghost', 'light', 'dark'] as const;
-const ButtonSize = ['sm', 'base'] as const;
+const ButtonSize = ['sm', 'base', 'lg'] as const;
 
 type ButtonProps = {
   isLoading?: boolean;
   isDarkBg?: boolean;
   variant?: (typeof ButtonVariant)[number];
   size?: (typeof ButtonSize)[number];
+  customColor?: string;
   leftIcon?: IconType | LucideIcon;
   rightIcon?: IconType | LucideIcon;
+  isRound?: boolean;
   classNames?: {
     leftIcon?: string;
     rightIcon?: string;
@@ -30,10 +32,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       isLoading,
       variant = 'primary',
       size = 'base',
+      customColor = null,
       isDarkBg = false,
       leftIcon: LeftIcon,
       rightIcon: RightIcon,
       classNames,
+      isRound = false,
       ...rest
     },
     ref
@@ -54,42 +58,53 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           [
             size === 'base' && ['px-3 py-1.5', 'text-sm md:text-base'],
             size === 'sm' && ['px-2 py-1', 'text-xs md:text-sm'],
+            size === 'lg' && ['px-4 py-2', 'text-base md:text-lg'],
           ],
           //#endregion  //*======== Size ===========
           //#region  //*=========== Variants ===========
           [
-            variant === 'primary' && [
-              'bg-primary-500 text-white',
-              'border-primary-600 border',
-              'hover:bg-primary-600 hover:text-white',
-              'active:bg-primary-700',
-              'disabled:bg-primary-700',
-            ],
-            variant === 'outline' && [
-              'text-primary-500',
-              'border-primary-500 border',
-              'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
-              isDarkBg &&
-                'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
-            ],
-            variant === 'ghost' && [
-              'text-primary-500',
-              'shadow-none',
-              'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
-              isDarkBg &&
-                'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
-            ],
-            variant === 'light' && [
-              'bg-white text-gray-700',
-              'border border-gray-300',
-              'hover:text-dark hover:bg-gray-100',
-              'active:bg-white/80 disabled:bg-gray-200',
-            ],
-            variant === 'dark' && [
-              'bg-gray-900 text-white',
-              'border border-gray-600',
-              'hover:bg-gray-800 active:bg-gray-700 disabled:bg-gray-700',
-            ],
+            variant === 'primary' &&
+              customColor == null && [
+                'bg-primary-500 text-white',
+                'border-primary-600 border',
+                'hover:bg-primary-600 hover:text-white',
+                'active:bg-primary-700',
+                'disabled:bg-primary-700',
+              ],
+            variant === 'outline' &&
+              customColor == null && [
+                'text-primary-500',
+                'border-primary-500 border',
+                'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
+                isDarkBg &&
+                  'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
+              ],
+            variant === 'ghost' &&
+              customColor == null && [
+                'text-primary-500',
+                'shadow-none',
+                'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
+                isDarkBg &&
+                  'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
+              ],
+            variant === 'light' &&
+              customColor == null && [
+                'bg-white text-gray-700',
+                'border border-gray-300',
+                'hover:text-dark hover:bg-gray-100',
+                'active:bg-white/80 disabled:bg-gray-200',
+              ],
+            variant === 'dark' &&
+              customColor == null && [
+                'bg-gray-900 text-white',
+                'border border-gray-600',
+                'hover:bg-gray-800 active:bg-gray-700 disabled:bg-gray-700',
+              ],
+          ],
+          [
+            isRound && 'rounded-full',
+            !isRound && 'rounded-md',
+            disabled && 'opacity-50',
           ],
           //#endregion  //*======== Variants ===========
           'disabled:cursor-not-allowed',

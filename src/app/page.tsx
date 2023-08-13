@@ -2,6 +2,8 @@
 
 import * as React from 'react';
 
+import { cn } from '@/lib/utils';
+
 import EducationSection from '@/sections/home/Education';
 import ExperienceSection from '@/sections/home/Experience';
 import HeroSection from '@/sections/home/Hero';
@@ -20,16 +22,17 @@ import ProjectsSection from '@/sections/home/Projects';
 // to customize the default configuration.
 
 export default function HomePage() {
-
   return (
     <>
       <HeroSection />
-      <EducationSection />
-      <ExperienceSection />
-      <div className='pt-4'>
-      <ProjectsSection />
-
+      <div className='bg-stone-50 dark:bg-[#0f1113]'>
+        <EducationSection />
+        <ExperienceSection />
       </div>
+      <div className={cn('pt-10', 'dark:bg-dark bg-stone-50')}>
+        <ProjectsSection />
+      </div>
+      {/* floating button */}
     </>
   );
 }

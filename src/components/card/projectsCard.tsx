@@ -1,39 +1,55 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 
-function ProjectsCard() {
+import { Project } from '@/types/Project';
+
+const imageVariants = {
+  beforeHover: {},
+  onHover: { scale: 1.4 },
+};
+
+const textVariants = {
+  beforeHover: { opacity: 0 },
+  onHover: { opacity: 1 },
+};
+
+function ProjectsCard(project: Project) {
   return (
-    <div className='max-w-sm rounded-lg border border-gray-200 bg-white p-6 shadow dark:border-gray-700 dark:bg-gray-800'>
-      <a href='#'>
-        <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-          Noteworthy technology acquisitions 2021
-        </h5>
-      </a>
-      <p className='mb-3 font-normal text-gray-700 dark:text-gray-400'>
-        Here are the biggest enterprise technology acquisitions of 2021 so far,
-        in reverse chronological order.
-      </p>
-      <a
-        href='#'
-        className='inline-flex items-center rounded-lg bg-blue-700 px-3 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
-      >
-        Read more
-        <svg
-          className='ml-2 h-3.5 w-3.5'
-          aria-hidden='true'
-          xmlns='http://www.w3.org/2000/svg'
-          fill='none'
-          viewBox='0 0 14 10'
+    <motion.a whileHover='onHover' initial='beforeHover' href='#'>
+      <div className=' relative flex h-[320px] w-[340px] justify-end overflow-hidden rounded-lg border shadow dark:border-gray-700 '>
+        <motion.div
+          variants={imageVariants}
+          className='absolute left-0 top-0 h-full w-full bg-cover'
+          style={{
+            backgroundImage: `url('/images/bg.jpeg')`,
+          }}
+        />
+        <motion.div
+          className='
+            z-10
+            flex
+            w-[360px]
+            items-end
+            '
+          variants={textVariants}
         >
-          <path
-            stroke='currentColor'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            strokeWidth='2'
-            d='M1 5h12m0 0L9 1m4 4L9 9'
-          />
-        </svg>
-      </a>
-    </div>
+          <div
+            className='h-[150px]
+           w-full
+           bg-stone-300/10 px-3 pb-3
+           pt-2
+          '
+          >
+            <h5 className='mb-2 text-2xl font-bold tracking-tight text-white'>
+              {project.name}
+            </h5>
+            <p className='line-clamp-3 text-ellipsis font-normal text-gray-400'>
+              {project.description}
+            </p>
+          </div>
+        </motion.div>
+      </div>
+    </motion.a>
   );
 }
 

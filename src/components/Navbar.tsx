@@ -8,6 +8,8 @@ import NAV_ITEMS from '@/data/navbarData';
 import ToggleButton from '@/components/buttons/ToggleButtonTheme';
 import { MenuButton } from '@/components/menu/HamburgerMenuButton';
 
+import cx from '@/utils/cx';
+
 function Navbar() {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
@@ -15,11 +17,16 @@ function Navbar() {
   let duration = 0.1;
 
   return (
-    <header className='border-sto fixed top-0 z-50 mx-auto  h-[100px] w-full bg-white/30 px-4 shadow backdrop-blur-xl dark:border-b dark:border-stone-700 dark:bg-stone-800'>
+    <header
+      className={cx(
+        'dark:bg-dark fixed top-0 z-30 w-full bg-white/70 px-10 shadow backdrop-blur-xl dark:border-b dark:border-stone-500',
+        navbar ? 'h-[380px]' : 'h-[100px]'
+      )}
+    >
       <div className='justify-between md:flex md:items-center'>
         <div className='flex items-center justify-between py-3'>
           <div className='md:block md:py-5'>
-            <h2 className='text-2xl font-bold'>DE Studio</h2>
+            <h2 className='text-2xl font-bold'>DnE</h2>
           </div>
           <div className='md:hidden'>
             <MenuButton
@@ -34,12 +41,12 @@ function Navbar() {
         </div>
 
         <div
-          className={`mt-8 flex-1 justify-self-center pb-3 md:mt-0 md:block md:pb-0 ${
+          className={`mt-8 flex-1 justify-self-center  pb-3 md:mt-0 md:block md:pb-0 ${
             navbar ? 'block  ' : 'hidden'
           }`}
         >
           <div
-            className={`items-center justify-end space-y-6  opacity-95 md:hidden
+            className={`items-center justify-end space-y-6   md:hidden
               md:space-x-6 md:space-y-0
               `}
           >
@@ -58,7 +65,7 @@ function Navbar() {
               >
                 <Link
                   href={item.page}
-                  className='block text-right text-lg font-medium text-gray-600 hover:text-gray-900 dark:text-gray-50 dark:hover:text-white lg:mt-0 lg:inline-block 
+                  className='block text-right text-lg font-medium text-gray-700 hover:scale-110 hover:text-black dark:text-gray-50 dark:hover:text-white lg:mt-0 lg:inline-block 
                   '
                   onClick={() => setNavbar(false)}
                 >
@@ -83,7 +90,7 @@ function Navbar() {
               <Link
                 key={idx}
                 href={item.page}
-                className='block text-right text-lg font-medium text-gray-600 hover:text-gray-900 dark:text-gray-50 dark:hover:text-white lg:mt-0 lg:inline-block
+                className='block text-right text-lg font-medium text-gray-700 hover:scale-110 hover:text-black dark:text-gray-50 dark:hover:text-white lg:mt-0 lg:inline-block
                 '
                 onClick={() => setNavbar(false)}
               >
