@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html lang='en' suppressHydrationWarning={true}>
       {header}
       <body>
         <ThemeProvider enableColorScheme={true} attribute='class'>

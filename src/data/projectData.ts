@@ -14,7 +14,7 @@ const projectDatas: Project[] = [
     
     Phasellus sed metus efficitur, mollis tellus eget, semper est. Nam mauris nulla, luctus at ultricies eu, tempus quis velit. Donec lorem sem, faucibus sed accumsan vitae, fringilla eu risus. In condimentum rutrum sem, eleifend finibus neque semper vitae. Phasellus sit amet arcu nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur in eros vel nisl elementum imperdiet. Nullam facilisis purus ipsum, sed finibus dolor aliquam a. Ut elit mauris, fringilla quis euismod non, bibendum nec erat. Cras orci nisl, hendrerit sed consequat et, finibus vel sem. Mauris sodales leo ipsum, eget convallis odio auctor et. Fusce pulvinar sed sapien ac aliquam. Vestibulum auctor, nulla sed fermentum tristique, ex dolor facilisis nibh, sed eleifend mi quam ac sem.`,
     thumbnail: 'https://flowbite.com/docs/images/flowbite-logo.svg',
-    url: 'https://flowbite.com/docs',
+    url: '',
     github: '',
     tech: ['Tailwind CSS', 'Flowbite'],
     images: [

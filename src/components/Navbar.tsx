@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import NAV_ITEMS from '@/data/navbarData';
 
@@ -16,11 +16,15 @@ function Navbar() {
   const [navbar, setNavbar] = useState(false);
   let duration = 0.1;
 
+  useEffect(() => {
+    console.log(currentTheme, theme, currentTheme === 'dark');
+  }, [currentTheme]);
+
   return (
     <header
       className={cx(
         'dark:bg-dark fixed top-0 z-30 w-full bg-white/70 px-10 shadow backdrop-blur-xl dark:border-b dark:border-stone-500',
-        navbar ? 'h-[380px]' : 'h-[100px]'
+        navbar ? 'md:h-[380px]' : 'h-[100px]'
       )}
     >
       <div className='justify-between md:flex md:items-center'>

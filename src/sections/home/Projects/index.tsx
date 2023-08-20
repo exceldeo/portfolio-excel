@@ -13,7 +13,7 @@ const ProjectsSection = () => {
       <h1 className='text-center text-4xl font-bold text-stone-900 dark:text-stone-50'>
         My Projects
       </h1>
-      <div className='mt-8 grid grid-cols-1 justify-items-center gap-6 md:grid-cols-4 md:gap-3'>
+      <div className='mt-8 grid grid-cols-1 justify-items-center gap-6 md:grid-cols-2 md:gap-3 lg:grid-cols-4'>
         {projectDatas
           .filter((_, idx) => idx < 8)
 
