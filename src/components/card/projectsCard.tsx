@@ -17,7 +17,11 @@ const textVariants = {
 
 function ProjectsCard(project: Project) {
   return (
-    <motion.a whileHover='onHover' initial='beforeHover' href='#'>
+    <motion.a
+      whileHover='onHover'
+      initial='beforeHover'
+      href={'project/' + project.slug}
+    >
       <div className=' relative flex h-[320px] w-[340px] justify-end overflow-hidden rounded-lg border shadow dark:border-gray-700 '>
         <motion.div
           variants={imageVariants}

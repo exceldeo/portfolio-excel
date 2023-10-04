@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import React, { useEffect, useState } from 'react';
 
+import useMediaQuery from '@/hooks/useMediaQuery';
+
 import NAV_ITEMS from '@/data/navbarData';
 
 import ToggleButton from '@/components/buttons/ToggleButtonTheme';
@@ -16,19 +18,22 @@ function Navbar() {
   const [navbar, setNavbar] = useState(false);
   let duration = 0.1;
 
+  const md = useMediaQuery('md');
+
   useEffect(() => {
-    console.log(currentTheme, theme, currentTheme === 'dark');
-  }, [currentTheme]);
+    if (md) {
+      setNavbar(false);
+    }
+  }, [md]);
 
   return (
     <header
       className={cx(
-        'dark:bg-dark fixed top-0 z-30 w-full bg-white/70 px-10 shadow backdrop-blur-xl dark:border-b dark:border-stone-500',
-        navbar ? 'md:h-[380px]' : 'h-[100px]'
+        'dark:bg-dark fixed top-0 z-30 min-h-[100px] w-full bg-white/70 px-10 shadow backdrop-blur-xl dark:border-b dark:border-stone-500'
       )}
     >
       <div className='justify-between md:flex md:items-center'>
-        <div className='flex items-center justify-between py-3'>
+        <div className='flex items-center justify-between pt-6 md:py-3'>
           <div className='md:block md:py-5'>
             <h2 className='text-2xl font-bold'>DnE</h2>
           </div>
@@ -50,7 +55,7 @@ function Navbar() {
           }`}
         >
           <div
-            className={`items-center justify-end space-y-6   md:hidden
+            className={`items-center justify-end space-y-6  md:hidden
               md:space-x-6 md:space-y-0
               `}
           >

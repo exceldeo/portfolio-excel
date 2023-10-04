@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useTheme } from 'next-themes';
 import React from 'react';
 
 import projectDatas from '@/data/projectData';
@@ -7,6 +8,8 @@ import Button from '@/components/buttons/Button';
 import ProjectsCard from '@/components/card/projectsCard';
 
 const ProjectsSection = () => {
+  const { systemTheme, theme } = useTheme();
+  const currentTheme = theme === 'system' ? systemTheme : theme;
   let durationData = 0.5;
   return (
     <section className='container mx-auto px-10 py-4' id='projects'>
@@ -32,6 +35,7 @@ const ProjectsSection = () => {
                 description={data.description}
                 github={data.github}
                 id={data.id}
+                slug={data.slug}
                 images={data.images}
                 name={data.name}
                 tech={data.tech}
@@ -43,8 +47,13 @@ const ProjectsSection = () => {
       </div>
 
       <div className='flex justify-center pb-5 pt-10'>
-        <Button variant='primary' size='lg' isRound={true}>
-          See More
+        <Button
+          className='mt-5'
+          variant={currentTheme == 'dark' ? 'primary' : 'outline'}
+          isRound={true}
+          size='lg'
+        >
+          Hire Me
         </Button>
       </div>
     </section>

@@ -23,7 +23,7 @@ import ProjectsSection from '@/sections/home/Projects';
 
 export default function HomePage() {
   return (
-    <>
+    <div>
       <HeroSection />
       <div className='bg-stone-50 dark:bg-[#0f1113]'>
         <EducationSection />
@@ -33,6 +33,6 @@ export default function HomePage() {
         <ProjectsSection />
       </div>
       {/* floating button */}
-    </>
+    </div>
   );
 }

@@ -11,19 +11,16 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
 export default function RootLayout({
-  header,
   children,
 }: {
-  header: React.ReactNode;
   children: React.ReactNode;
 }) {
   return (
     <html lang='en' suppressHydrationWarning={true}>
-      {header}
       <body>
         <ThemeProvider enableColorScheme={true} attribute='class'>
           <Navbar />
-          <main className='w-full'>{children}</main>
+          <main className='mt-[100px] w-full'>{children}</main>
           <Footer />
           <ScrollButton />
         </ThemeProvider>
