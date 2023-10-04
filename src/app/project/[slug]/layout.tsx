@@ -6,7 +6,7 @@ function ProjectLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>
       <Navigation />
-      <main className='mt-[80px]'>{children}</main>
+      <main className='bg-dark  min-h-screen'>{children}</main>
     </div>
   );
 }

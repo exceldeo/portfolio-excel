@@ -2,8 +2,6 @@
 
 import * as React from 'react';
 
-import { cn } from '@/lib/utils';
-
 import Navbar from '@/components/Navbar';
 
 import EducationSection from '@/sections/home/Education';
@@ -22,16 +20,12 @@ import ProjectsSection from '@/sections/home/Projects';
 export default function HomePage() {
   return (
     <div>
-      <Navbar />
-      <main className='mt-[100px] w-full'>
+      <main className='bg-dark w-full pt-24'>
+        <Navbar />
         <HeroSection />
-        <div className='bg-stone-50 dark:bg-[#0f1113]'>
-          <EducationSection />
-          <ExperienceSection />
-        </div>
-        <div className={cn('pt-10', 'dark:bg-dark bg-stone-50')}>
-          <ProjectsSection />
-        </div>
+        <EducationSection />
+        <ExperienceSection />
+        <ProjectsSection />
       </main>
       {/* floating button */}
     </div>

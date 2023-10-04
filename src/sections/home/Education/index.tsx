@@ -5,10 +5,8 @@ import EducationCard from '@/components/card/educationCard';
 
 const EducationSection = () => {
   return (
-    <section className='container mx-auto mt-3 px-10 py-4' id='education'>
-      <h1 className='text-4xl font-bold text-stone-900 dark:text-stone-50'>
-        Education
-      </h1>
+    <section className='container mx-auto px-10 py-4 pt-10' id='education'>
+      <h1 className='text-4xl font-bold text-stone-50'>Education</h1>
       <motion.div
         className='mt-8 flex flex-col gap-3'
         initial='offscreen'

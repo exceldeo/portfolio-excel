@@ -6,7 +6,7 @@ import ExperienceCard from '@/components/card/experienceCard';
 const ExperienceSection = () => {
   return (
     <section className='container mx-auto px-10 py-4' id='experience'>
-      <h1 className='text-right text-4xl font-bold text-stone-900 dark:text-stone-50'>
+      <h1 className='text-right text-4xl font-bold text-stone-50'>
         Experience
       </h1>
       <motion.div

@@ -1,20 +1,18 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { BsGlobe } from 'react-icons/bs';
 
+import { useModal } from '@/hooks';
+
 import Carousel from '@/app/project/[slug]/carousel';
-import ModalProjectImage from '@/app/project/[slug]/componnents/modalProjectImages';
 
 import { Project } from '@/types/Project';
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
   const [project, setProject] = useState<Project | null>(null);
-  const [showModal, setShowModal] = useState<boolean>(false);
-
-  const [currentImage, setCurrentImage] = useState<string>('');
+  const modal = useModal();
 
   useEffect(() => {
     fetch(`/api/project/${params.slug}`)
@@ -25,16 +23,29 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   }, [params.slug]);
 
   if (!project) {
-    return <div>Loading...</div>;
+    return (
+      <div className='flex w-full items-center justify-center pt-20 text-white'>
+        Loading...
+      </div>
+    );
   }
 
   const handlerShowModal = (image: string) => {
-    setCurrentImage(image);
-    setShowModal(true);
+    modal.open({
+      content: (
+        <div className='relative h-full w-full'>
+          <img
+            src={image}
+            className='h-full w-full object-contain'
+            alt='Project'
+          />
+        </div>
+      ),
+    });
   };
 
   return (
-    <div className='container relative isolate mx-auto overflow-hidden py-3'>
+    <div className='bg-dark container relative isolate mx-auto overflow-hidden pb-9 pt-40'>
       <div className='mx-auto flex max-w-7xl flex-col items-center px-6 text-center lg:px-8'>
         <div className='mx-auto max-w-2xl lg:mx-0'>
           <h1 className='font-display text-4xl font-bold tracking-tight text-white sm:text-6xl'>
@@ -95,17 +106,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           ></p>
         </div>
       </div>
-      {showModal && (
-        <ModalProjectImage onClose={() => setShowModal(false)}>
-          <Image
-            src={currentImage}
-            alt={project.name}
-            width={500}
-            height={600}
-            layout='fixed'
-          />
-        </ModalProjectImage>
-      )}
     </div>
   );
 }

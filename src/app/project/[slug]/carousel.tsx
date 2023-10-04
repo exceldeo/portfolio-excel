@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ArrowLeftIcon, ArrowRightIcon } from 'lucide-react';
 import { useState } from 'react';
 
@@ -79,17 +79,15 @@ const Carousel = ({
   return (
     <div className='carousel'>
       <div className='carousel-images'>
-        <AnimatePresence>
-          <motion.img
-            key={currentIndex}
-            src={images[currentIndex]}
-            initial={direction === 'right' ? 'hiddenRight' : 'hiddenLeft'}
-            animate='visible'
-            exit='exit'
-            onClick={() => handleImageClick(images[currentIndex])}
-            variants={slideVariants}
-          />
-        </AnimatePresence>
+        <motion.img
+          key={currentIndex}
+          src={images[currentIndex]}
+          initial={direction === 'right' ? 'hiddenRight' : 'hiddenLeft'}
+          animate='visible'
+          exit='exit'
+          onClick={() => handleImageClick(images[currentIndex])}
+          variants={slideVariants}
+        />
         <div className='slide_direction'>
           <motion.div
             variants={slidersVariants}

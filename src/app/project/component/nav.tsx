@@ -6,22 +6,22 @@ function Navigation() {
   return (
     <header>
       <div
-        className={`bg-zinc-900/500 fixed inset-x-0 top-0 z-50  border-b border-zinc-800  backdrop-blur  duration-200 
+        className={`bg-primaryDark-900/500 fixed inset-x-0 top-0 z-50 border-b border-zinc-800 backdrop-blur duration-200 
 				`}
       >
         <div className='container mx-auto flex flex-row-reverse items-center justify-between p-6'>
           <div className='flex justify-between gap-8'>
-            <Link
+            {/* <Link
               href='/projects'
               className='text-zinc-400 duration-200 hover:text-zinc-100'
             >
               Projects
-            </Link>
+            </Link> */}
             <Link
-              href='/contact'
+              href='/'
               className='text-zinc-400 duration-200 hover:text-zinc-100'
             >
-              Contact
+              Home
             </Link>
           </div>
 

@@ -1,15 +1,11 @@
 import Image from 'next/image';
-import { useTheme } from 'next-themes';
 import React from 'react';
 
 import Button from '@/components/buttons/Button';
 
 function HeroSection() {
-  const { systemTheme, theme } = useTheme();
-  const currentTheme = theme === 'system' ? systemTheme : theme;
-
   return (
-    <section id='home' className='dark:bg-dark mt-[100px] w-full border-b'>
+    <section id='home' className=' w-full'>
       <div className='flex w-full flex-col justify-center pt-5 md:flex-row'>
         <Image
           src='/images/hero.png'
@@ -20,20 +16,17 @@ function HeroSection() {
         />
         <div className='mx-auto grid content-end px-5 py-10 md:w-3/6 '>
           <div className='md:mb-10'>
-            <h1 className='text-3xl font-bold text-stone-800 dark:text-stone-100 sm:text-7xl'>
-              Hi, I'm{' '}
-              <span className='text-primary-600 dark:text-primary-500'>
-                Excel Deo
-              </span>
+            <h1 className='text-3xl font-bold text-white sm:text-7xl'>
+              Hi, I'm <span className='text-primary-500'>Excel Deo</span>
             </h1>
-            <h2 className='text-primary-900 text-sm font-medium dark:text-white sm:text-2xl'>
+            <h2 className='font-mediumtext-white text-sm text-white sm:text-2xl'>
               I'm a Fullstack Developer and Mobile Developer
             </h2>
             <div>
               <Button
                 className='mt-5'
-                variant={currentTheme == 'dark' ? 'primary' : 'outline'}
-                isRound={true}
+                variant='primary'
+                isRound={false}
                 size='lg'
               >
                 Hire Me
@@ -60,10 +53,7 @@ function HeroSection() {
             </div>
           </div>
         </div>
-        {/* <div className='mx-auto my-[20px] flex h-[450px] w-[450px] content-center items-center  justify-center rounded-full  bg-stone-50 shadow-2xl dark:bg-stone-100'> */}
-        {/* </div> */}
       </div>
-      {/* <SkillSection /> */}
     </section>
   );
 }

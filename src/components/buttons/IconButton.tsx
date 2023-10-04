@@ -80,7 +80,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
               'active:bg-white/80 disabled:bg-gray-200',
             ],
             variant === 'dark' && [
-              'bg-gray-900 text-white',
+              'bg-dark text-white',
               'border border-gray-600',
               'hover:bg-gray-800 active:bg-gray-700 disabled:bg-gray-700',
             ],

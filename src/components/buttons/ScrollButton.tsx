@@ -40,8 +40,8 @@ const ScrollButton = () => {
           viewport={{ once: true }}
         >
           <IconButton
-            className='fixed bottom-7 right-3 z-10 h-4 transform cursor-pointer rounded-full bg-white dark:bg-stone-950'
-            variant='outline'
+            className='fixed bottom-7 right-3 z-10 h-4 transform cursor-pointer rounded-full '
+            variant='dark'
             icon={ArrowUp}
             onClick={scrollToTop}
           />

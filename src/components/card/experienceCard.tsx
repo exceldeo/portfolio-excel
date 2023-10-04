@@ -28,22 +28,22 @@ const ExperienceCard: React.FC<{
           },
         }}
       >
-        <p className='text-2xl font-semibold'>{company}</p>
-        <p className='text-lg font-medium'>{position}</p>
-        <p className='text-lg font-medium'>{year}</p>
+        <p className='text-2xl font-semibold text-white'>{company}</p>
+        <p className='text-lg font-medium text-white'>{position}</p>
+        <p className='text-lg font-medium text-white'>{year}</p>
         {desc &&
           desc.map((item, index) => (
-            <p key={index} className='text-sm md:text-base'>
+            <p key={index} className='text-sm text-white md:text-base'>
               {item}
             </p>
           ))}
       </motion.div>
       <div className='relative flex flex-col items-center'>
-        <div className='bg-warm-gray-100 z-20 flex aspect-square h-[1.75rem] items-center justify-center rounded-full dark:bg-[#222120]'>
-          <div className='dark:border-warm-gray-600 border-primary-600 mt-0.5 aspect-square h-[1.25rem] rounded-full border-[5px] bg-white' />
+        <div className='bg-warm-gray-100 z-20 flex aspect-square h-[1.75rem] items-center justify-center rounded-full '>
+          <div className='border-primary-600 mt-0.5 aspect-square h-[1.25rem] rounded-full border-[5px] bg-white' />
         </div>
         {!isLast && (
-          <div className='dark:bg-warm-gray-600 absolute z-10 h-[120%] w-[1px] bg-stone-400' />
+          <div className='absolute z-10 h-[120%] w-[1px] bg-stone-400' />
         )}
       </div>
     </motion.div>

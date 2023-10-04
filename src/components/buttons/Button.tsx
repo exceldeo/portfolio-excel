@@ -75,7 +75,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
               customColor == null && [
                 'text-primary-500',
                 'border-primary-500 border',
-                'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
+                'active:bg-primary-100 disabled:bg-primary-100',
                 isDarkBg &&
                   'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
               ],
