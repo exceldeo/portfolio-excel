@@ -1,3 +1,8 @@
+export interface Github {
+  label: string;
+  url: string;
+}
+
 export interface Project {
   id: string;
   name: string;
@@ -5,7 +10,7 @@ export interface Project {
   description: string;
   thumbnail: string;
   url: string?;
-  github: string?;
+  github: Github[]?;
   tech: string[];
-  images: string[]?;
+  images: string[];
 }

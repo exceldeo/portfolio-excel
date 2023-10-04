@@ -15,13 +15,24 @@ const projectDatas: Project[] = [...Array(10)].map((_) => ({
   thumbnail: 'https://flowbite.com/docs/images/flowbite-logo.svg',
   slug: 'flowbite',
   url: '',
-  github: '',
+  github: [
+    {
+      label: 'Github',
+      url: '',
+    },
+  ],
   tech: ['Tailwind CSS', 'Flowbite'],
   images: [
-    'https://flowbite.com/docs/images/flowbite-1.png',
-    'https://flowbite.com/docs/images/flowbite-2.png',
-    'https://flowbite.com/docs/images/flowbite-3.png',
-    'https://flowbite.com/docs/images/flowbite-4.png',
+    '/images/projects/image-1.png',
+    '/images/projects/image-2.png',
+    '/images/projects/image-1.png',
+    '/images/projects/image-2.png',
+    '/images/projects/image-1.png',
+    '/images/projects/image-2.png',
+    '/images/projects/image-1.png',
+    '/images/projects/image-2.png',
+    '/images/projects/image-1.png',
+    '/images/projects/image-2.png',
   ],
 }));
 
