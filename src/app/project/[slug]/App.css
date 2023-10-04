@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 .App-header {
   font-size: 1rem;
   text-align: center;
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   padding-bottom: 2rem;
 }
 .carousel-images {
@@ -27,7 +27,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  margin: auto 10px ;
+  margin: auto 10px;
   height: 30px;
   width: 30px;
 }

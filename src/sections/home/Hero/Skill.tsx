@@ -38,7 +38,7 @@ const SkillSection = () => {
   return (
     <section
       id='tech-stack'
-      className='w-full relative z-20 mx-auto min-h-[15rem] md:min-h-[10rem]'
+      className='relative z-20 mx-auto min-h-[15rem] w-full md:min-h-[10rem]'
     >
       <div className='absolute w-full'>
         <motion.div
