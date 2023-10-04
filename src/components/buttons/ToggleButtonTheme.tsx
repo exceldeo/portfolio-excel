@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { RiMoonFill, RiSunLine } from 'react-icons/ri';
 
 import './style.css';
@@ -17,10 +17,6 @@ function ToggleButtonTheme({
   setChecked,
   ...rest
 }: Props & React.HTMLAttributes<HTMLDivElement>) {
-  useEffect(() => {
-    console.log(checked);
-  }, [checked]);
-
   return (
     <div
       className={cx('flex w-full items-center justify-center', className)}
