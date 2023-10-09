@@ -2,12 +2,10 @@
 
 import * as React from 'react';
 
+import { Metadata } from '@/components/metadata';
 import Navbar from '@/components/Navbar';
 
-import EducationSection from '@/sections/home/Education';
-import ExperienceSection from '@/sections/home/Experience';
 import HeroSection from '@/sections/home/Hero';
-import ProjectsSection from '@/sections/home/Projects';
 
 /**
  * SVGR Support
@@ -17,15 +15,45 @@ import ProjectsSection from '@/sections/home/Projects';
  * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
  */
 
+export const metadata: Metadata = {
+  title: {
+    template: '%s | Excel Deo',
+    default: 'Home',
+  },
+  description: 'Home Page',
+  robots: {},
+  icon: '',
+  shortcut: '',
+  apple: '',
+  manifest: '',
+
+  authors: [],
+  openGraph: {
+    url: '',
+    title: '',
+    description: '',
+    siteName: '',
+    images: [],
+    type: '',
+    locale: '',
+  },
+  twitter: {
+    card: '',
+    creator: '',
+    title: '',
+    description: '',
+    images: [],
+  },
+};
+
 export default function HomePage() {
   return (
     <div>
-      <main className='bg-dark w-full pt-24'>
+      <main className='bg-dark w-full'>
         <Navbar />
         <HeroSection />
-        <EducationSection />
-        <ExperienceSection />
-        <ProjectsSection />
+        {/* <EducationSection />
+        <ExperienceSection /> */}
       </main>
       {/* floating button */}
     </div>

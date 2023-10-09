@@ -1,14 +1,21 @@
+'use client';
+
 import { motion } from 'framer-motion';
+import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 
 import useMediaQuery from '@/hooks/useMediaQuery';
 
 import NAV_ITEMS from '@/data/navbarData';
 
+import { MenuButton } from '@/components/menu/HamburgerMenuButton';
+
 import cx from '@/utils/cx';
 
-function Navbar() {
+function Navbar({ withBackButton = false }: { withBackButton?: boolean }) {
+  const router = useRouter();
   const [navbar, setNavbar] = useState(false);
   let duration = 0.1;
 
@@ -21,70 +28,109 @@ function Navbar() {
   }, [md]);
 
   return (
-    <header
-      className={cx(
-        'bg-primaryDark-900/500 fixed inset-x-0 top-0 z-50 border-b border-zinc-800 px-10 backdrop-blur  duration-200'
-      )}
-    >
-      <div className='justify-between md:flex md:items-center'>
-        <div className='flex items-center justify-between pt-6 md:py-3'>
-          <div className='md:block md:py-5'>
-            <h2 className='text-2xl font-bold text-white'>DnE</h2>
-          </div>
-        </div>
+    <header>
+      <div
+        className={`bg-primaryDark-900/500 fixed inset-x-0 top-0 z-50 border-b border-zinc-800 backdrop-blur duration-200
+      `}
+      >
+        <div className=' flex flex-row'>
+          <div className='container mx-auto flex flex-row-reverse items-center justify-between p-6'>
+            <div className='flex md:hidden md:items-center'>
+              <MenuButton
+                isOpen={navbar}
+                onClick={() => setNavbar(!navbar)}
+                strokeWidth='3'
+                color='#fff'
+                lineProps={{ strokeLinecap: 'round' }}
+                transition={{ type: 'spring', stiffness: 260, damping: 20 }}
+              />
+            </div>
 
-        <div
-          className={`mt-8 flex-1 justify-self-center  pb-3 md:mt-0 md:block md:pb-0 ${
-            navbar ? 'block  ' : 'hidden'
-          }`}
-        >
-          <div
-            className={`items-center justify-end space-y-6  md:hidden
-              md:space-x-6 md:space-y-0
-              `}
-          >
-            {NAV_ITEMS.map((item, idx) => (
-              <motion.div
-                animate={navbar ? 'open' : 'closed'}
-                key={idx}
-                variants={{
-                  open: {
-                    opacity: 1,
-                    x: 0,
-                    transition: { duration: (duration += 0.1) },
-                  },
-                  closed: { opacity: 0, x: '-50%' },
-                }}
-              >
+            <div className='hidden justify-between gap-8 md:flex'>
+              {withBackButton && (
                 <Link
+                  href='/'
+                  className='text-zinc-400 duration-200 hover:text-zinc-100'
+                >
+                  Home
+                </Link>
+              )}
+              {NAV_ITEMS.map((item, idx) => (
+                <Link
+                  key={idx}
                   href={item.page}
-                  className='block text-right text-lg font-medium  text-gray-50 hover:scale-110 hover:text-white lg:mt-0 lg:inline-block 
-                  '
+                  className='text-zinc-400 duration-200 hover:text-zinc-100
+                '
                   onClick={() => setNavbar(false)}
                 >
                   {item.label}
                 </Link>
-              </motion.div>
-            ))}
+              ))}
+            </div>
+            {withBackButton ? (
+              <div
+                onClick={() => router.back()}
+                className='text-zinc-300 duration-200 hover:text-zinc-100'
+              >
+                <ArrowLeft className='h-6 w-6 ' />
+              </div>
+            ) : (
+              <Link href='/' className='text-2xl font-bold text-white'>
+                {/* svg icon from folder public/svg/icon.svg */}
+                <img src='/svg/icon.svg' alt='Excel Deo' className='h-6 w-6' />
+              </Link>
+            )}
           </div>
-          <div
-            className={`hidden items-center justify-end space-y-6  md:flex md:space-x-6 md:space-y-0 
-              
-              `}
-          >
-            {NAV_ITEMS.map((item, idx) => (
+        </div>
+        <div
+          className={cx(
+            `flex w-full flex-col items-center justify-center space-y-6 p-6 md:flex-row md:justify-end md:space-x-6 md:space-y-0`,
+            !navbar || md ? 'hidden' : 'flex-1'
+          )}
+        >
+          {withBackButton && (
+            <motion.div
+              animate={navbar ? 'open' : 'closed'}
+              variants={{
+                open: {
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: (duration += 0.1) },
+                },
+                closed: { opacity: 0, x: '-50%' },
+              }}
+            >
               <Link
-                key={idx}
+                href='/'
+                className='text-zinc-400 duration-200 hover:text-zinc-100'
+              >
+                Home
+              </Link>
+            </motion.div>
+          )}
+          {NAV_ITEMS.map((item, idx) => (
+            <motion.div
+              animate={navbar ? 'open' : 'closed'}
+              key={idx}
+              variants={{
+                open: {
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: (duration += 0.1) },
+                },
+                closed: { opacity: 0, x: '-50%' },
+              }}
+            >
+              <Link
                 href={item.page}
-                className='block text-right text-lg font-medium  text-gray-50 hover:scale-110 hover:text-white lg:mt-0 lg:inline-block
-                '
+                className='text-zinc-400 duration-200 hover:text-zinc-100
+                  '
                 onClick={() => setNavbar(false)}
               >
                 {item.label}
               </Link>
-            ))}
-            <div></div>
-          </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </header>
