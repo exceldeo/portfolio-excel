@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 
+import { Metadata } from '@/components/metadata';
 import Navbar from '@/components/Navbar';
 
 import HeroSection from '@/sections/home/Hero';
@@ -13,6 +14,37 @@ import HeroSection from '@/sections/home/Hero';
  * You can override the next-env if the type is important to you
  * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
  */
+
+export const metadata: Metadata = {
+  title: {
+    template: '%s | Excel Deo',
+    default: 'Home',
+  },
+  description: 'Home Page',
+  robots: {},
+  icon: '',
+  shortcut: '',
+  apple: '',
+  manifest: '',
+
+  authors: [],
+  openGraph: {
+    url: '',
+    title: '',
+    description: '',
+    siteName: '',
+    images: [],
+    type: '',
+    locale: '',
+  },
+  twitter: {
+    card: '',
+    creator: '',
+    title: '',
+    description: '',
+    images: [],
+  },
+};
 
 export default function HomePage() {
   return (
