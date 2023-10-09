@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import React from 'react';
-import { BsGlobe } from 'react-icons/bs';
 
 import { Project } from '@/types/Project';
 
@@ -11,8 +9,8 @@ const imageVariants = {
 };
 
 const textVariants = {
-  beforeHover: { opacity: 0 },
-  onHover: { opacity: 1 },
+  beforeHover: { opacity: 1 },
+  onHover: { opacity: 0 },
 };
 
 function ProjectCard({ project }: { project: Project }) {
@@ -22,7 +20,7 @@ function ProjectCard({ project }: { project: Project }) {
       initial='beforeHover'
       href={'project/' + project.slug}
     >
-      <div className=' relative flex h-[320px] w-[340px] justify-end overflow-hidden rounded-lg border shadow dark:border-gray-700 '>
+      <div className='relative flex h-full min-h-[320px] w-full justify-end overflow-hidden rounded-lg border border-gray-700 shadow '>
         <motion.div
           variants={imageVariants}
           className='absolute left-0 top-0 h-full w-full bg-cover'
@@ -34,7 +32,7 @@ function ProjectCard({ project }: { project: Project }) {
           className='
             z-10
             flex
-            w-[360px]
+            w-full
             items-end
             '
           variants={textVariants}
@@ -42,20 +40,40 @@ function ProjectCard({ project }: { project: Project }) {
           <div
             className='h-full
            w-full
-           bg-stone-300/10 px-3 pb-3
+           bg-stone-100/10 px-3 pb-3
            pt-2
           '
           >
             <div className='flex h-full flex-col'>
-              <div className='h-3/4 '>
-                <h5 className='mb-2 text-2xl font-bold tracking-tight text-white'>
+              <div className='h-3/4 space-y-4 p-3'>
+                <div className='text-4xl font-bold tracking-tight text-white'>
                   {project.name}
-                </h5>
-                <p className='line-clamp-6 text-ellipsis font-normal text-gray-400'>
+                </div>
+                <div className='flex flex-wrap gap-2'>
+                  {project.tech.map((tech, i) => {
+                    return (
+                      <div
+                        key={i}
+                        className='
+                        rounded-full
+                        bg-gray-700
+                        px-3
+                        py-1
+                        text-sm
+                        font-medium
+                        text-white
+                        '
+                      >
+                        {tech}
+                      </div>
+                    );
+                  })}
+                </div>
+                <p className='line-clamp-5 text-ellipsis font-normal text-gray-400'>
                   {project.description}
                 </p>
               </div>
-              <div className='flex justify-center'>
+              {/* <div className='flex justify-center'>
                 {project.github &&
                   project.github.length > 0 &&
                   project.github.map((github, i) => {
@@ -93,7 +111,7 @@ function ProjectCard({ project }: { project: Project }) {
                     </button>
                   </Link>
                 )}
-              </div>
+              </div> */}
             </div>
           </div>
         </motion.div>

@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Navigation from '@/app/project/component/nav';
+import Navbar from '@/components/Navbar';
 
 function ProjectLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>
-      <Navigation />
-      <main className='bg-dark  min-h-screen'>{children}</main>
+      <Navbar withBackButton={true} />
+      <main className='bg-dark  min-h-screen pt-24'>{children}</main>
     </div>
   );
 }

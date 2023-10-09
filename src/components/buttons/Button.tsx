@@ -96,9 +96,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
               ],
             variant === 'dark' &&
               customColor == null && [
-                'bg-gray-900 text-white',
-                'border border-gray-600',
-                'hover:bg-gray-800 active:bg-gray-700 disabled:bg-gray-700',
+                'mb-2 mr-2 inline-flex items-center rounded-lg border border-white  px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#24292F]/90 focus:outline-none focus:ring-4 focus:ring-[#24292F]/50 dark:hover:bg-[#050708]/30 dark:focus:ring-gray-500',
               ],
           ],
           [

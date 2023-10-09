@@ -1,23 +1,11 @@
 const NAV_ITEMS: NavItem[] = [
   {
-    label: 'Home',
-    page: '#home',
-  },
-  {
-    label: 'Education',
-    page: '#education',
-  },
-  {
-    label: 'Experience',
-    page: '#experience',
-  },
-  {
     label: 'Projects',
-    page: '#projects',
+    page: '/project',
   },
   {
     label: 'Contact',
-    page: '#contact',
+    page: '/contact',
   },
 ];
 

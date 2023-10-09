@@ -4,10 +4,7 @@ import * as React from 'react';
 
 import Navbar from '@/components/Navbar';
 
-import EducationSection from '@/sections/home/Education';
-import ExperienceSection from '@/sections/home/Experience';
 import HeroSection from '@/sections/home/Hero';
-import ProjectsSection from '@/sections/home/Projects';
 
 /**
  * SVGR Support
@@ -20,12 +17,11 @@ import ProjectsSection from '@/sections/home/Projects';
 export default function HomePage() {
   return (
     <div>
-      <main className='bg-dark w-full pt-24'>
+      <main className='bg-dark w-full'>
         <Navbar />
         <HeroSection />
-        <EducationSection />
-        <ExperienceSection />
-        <ProjectsSection />
+        {/* <EducationSection />
+        <ExperienceSection /> */}
       </main>
       {/* floating button */}
     </div>
