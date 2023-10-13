@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
@@ -77,7 +78,13 @@ function Navbar({ withBackButton = false }: { withBackButton?: boolean }) {
             ) : (
               <Link href='/' className='text-2xl font-bold text-white'>
                 {/* svg icon from folder public/svg/icon.svg */}
-                <img src='/svg/icon.svg' alt='Excel Deo' className='h-6 w-6' />
+                <Image
+                  width={24}
+                  height={24}
+                  src='/svg/icon.svg'
+                  alt='Excel Deo'
+                  className='h-6 w-6'
+                />
               </Link>
             )}
           </div>

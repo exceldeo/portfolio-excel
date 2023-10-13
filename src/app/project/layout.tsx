@@ -1,6 +1,11 @@
+import { Metadata } from 'next';
 import React from 'react';
 
 import Navbar from '@/components/Navbar';
+
+export const metadata: Metadata = {
+  title: 'Projects',
+};
 
 function ProjectLayout({ children }: { children: React.ReactNode }) {
   return (

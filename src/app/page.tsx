@@ -1,5 +1,4 @@
-'use client';
-
+import { Metadata } from 'next';
 import * as React from 'react';
 
 import Navbar from '@/components/Navbar';
@@ -13,6 +12,10 @@ import HeroSection from '@/sections/home/Hero';
  * You can override the next-env if the type is important to you
  * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
  */
+
+export const metadata: Metadata = {
+  title: 'Home',
+};
 
 export default function HomePage() {
   return (
