@@ -15,6 +15,9 @@ import HeroSection from '@/sections/home/Hero';
 
 export const metadata: Metadata = {
   title: 'Home',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function HomePage() {

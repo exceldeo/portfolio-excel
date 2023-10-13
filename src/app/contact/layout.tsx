@@ -5,6 +5,9 @@ import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
   title: 'Contact',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 function ContactLayout({ children }: { children: React.ReactNode }) {

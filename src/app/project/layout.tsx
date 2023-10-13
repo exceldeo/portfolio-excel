@@ -5,6 +5,9 @@ import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
   title: 'Projects',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 function ProjectLayout({ children }: { children: React.ReactNode }) {
