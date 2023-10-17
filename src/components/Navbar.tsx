@@ -81,7 +81,7 @@ function Navbar({ withBackButton = false }: { withBackButton?: boolean }) {
                 <Image
                   width={24}
                   height={24}
-                  src='/images/icon.svg'
+                  src='/images/icon-white.png'
                   alt='Excel Deo'
                   className='h-6 w-6'
                 />

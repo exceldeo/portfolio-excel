@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import React, { useCallback } from 'react';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
@@ -140,7 +141,12 @@ function HeroSection() {
             </h2>
             <div>
               <Button className='mt-5' variant='dark' isRound={false} size='lg'>
-                Curriculum Vitae
+                <Link
+                  href='https://docs.google.com/document/d/1M6AIYaAkaW-ShBklSt2j6NzuBwhnzxtIta41MeY-UXc/edit?usp=sharing'
+                  target='_blank'
+                >
+                  Curriculum Vitae
+                </Link>
               </Button>
             </div>
           </div>

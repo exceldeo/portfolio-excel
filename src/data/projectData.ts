@@ -1,39 +1,417 @@
 import { Project } from '@/types/Project';
 
-const projectDatas: Project[] = [...Array(10)].map((_) => ({
-  id: '1',
-  name: 'Flowbite',
-  description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est magna, iaculis et dui consectetur, suscipit porta leo. Sed lacinia leo quam, faucibus euismod diam cursus sit amet. Proin imperdiet felis augue, sed venenatis ante fringilla aliquam. Nullam rutrum magna quam, a egestas ligula cursus sed. Morbi ante metus, vehicula a turpis a, commodo sagittis dolor. Morbi imperdiet, nunc eget posuere gravida, risus dui mattis lacus, eu fermentum dui dui nec quam. Quisque pharetra venenatis nisl at efficitur. Morbi faucibus eros eu sollicitudin tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Suspendisse rutrum ex quis nisl hendrerit pulvinar. Sed tempor semper mauris in porta.
-
-    Vivamus iaculis laoreet urna, ac molestie mauris eleifend ut. Sed malesuada sapien nec imperdiet gravida. Suspendisse potenti. Mauris sagittis metus leo, et finibus nisi rhoncus at. Vivamus nec dui rutrum, consequat libero quis, lobortis lacus. Nam diam urna, convallis non urna in, posuere placerat velit. Sed pellentesque enim convallis erat pharetra faucibus.
-    
-    Curabitur maximus lorem facilisis mauris scelerisque, eu commodo turpis mollis. Integer porttitor massa vitae ante placerat mattis. Fusce ullamcorper nisl mi, sed scelerisque tortor consequat in. Mauris suscipit mi eget purus tristique hendrerit. Integer sem urna, accumsan ut est nec, laoreet luctus enim. Integer et velit libero. Nam eget lorem at sapien accumsan sodales eu nec mi. Phasellus venenatis elit id lacus facilisis ultrices. Integer mollis leo lorem, eu pretium nisl eleifend in. Proin id venenatis dui, sit amet mattis erat. Suspendisse placerat mauris pellentesque, dictum libero vel, feugiat lacus. Phasellus interdum in sem eu fringilla. Proin id consectetur lacus. Sed dapibus lorem nec tincidunt fringilla. Praesent ullamcorper magna nec iaculis aliquet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-    
-    Vestibulum pulvinar, turpis id aliquet posuere, velit tortor congue ipsum, vitae volutpat nisi nulla quis metus. Praesent ultrices interdum pulvinar. Aliquam a tortor sapien. Pellentesque arcu est, molestie sed turpis vitae, tempus fringilla dolor. Praesent pellentesque libero sem. Phasellus consequat arcu id bibendum elementum. Cras non eros et nulla interdum varius. Aliquam pretium sagittis scelerisque. Sed viverra nulla nibh, ac varius metus maximus eget. Mauris sagittis diam ac ligula euismod bibendum. Vivamus id tortor id libero posuere sagittis et et neque. Nullam viverra laoreet ligula, vitae porta nisi lacinia vel. Curabitur leo nisl, accumsan sed tincidunt id, vulputate ac felis. Quisque finibus pretium sapien.
-    
-    Phasellus sed metus efficitur, mollis tellus eget, semper est. Nam mauris nulla, luctus at ultricies eu, tempus quis velit. Donec lorem sem, faucibus sed accumsan vitae, fringilla eu risus. In condimentum rutrum sem, eleifend finibus neque semper vitae. Phasellus sit amet arcu nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur in eros vel nisl elementum imperdiet. Nullam facilisis purus ipsum, sed finibus dolor aliquam a. Ut elit mauris, fringilla quis euismod non, bibendum nec erat. Cras orci nisl, hendrerit sed consequat et, finibus vel sem. Mauris sodales leo ipsum, eget convallis odio auctor et. Fusce pulvinar sed sapien ac aliquam. Vestibulum auctor, nulla sed fermentum tristique, ex dolor facilisis nibh, sed eleifend mi quam ac sem.`,
-  thumbnail: 'https://flowbite.com/docs/images/flowbite-logo.svg',
-  slug: 'flowbite',
-  url: '',
-  github: [
-    {
-      label: 'Github',
-      url: '',
-    },
-  ],
-  tech: ['Tailwind CSS', 'Flowbite'],
-  images: [
-    '/images/projects/image-1.png',
-    '/images/projects/image-2.png',
-    '/images/projects/image-1.png',
-    '/images/projects/image-2.png',
-    '/images/projects/image-1.png',
-    '/images/projects/image-2.png',
-    '/images/projects/image-1.png',
-    '/images/projects/image-2.png',
-    '/images/projects/image-1.png',
-    '/images/projects/image-2.png',
-  ],
-}));
+const projectDatas: Project[] = [
+  {
+    id: '1',
+    name: 'Bina',
+    description: ``,
+    thumbnail: '/images/projects/bina/image-1.png',
+    slug: 'bina',
+    url: '',
+    github: [
+      {
+        label: 'Github',
+        url: '',
+      },
+    ],
+    tech: ['Next Js', 'Tailwind CSS', 'Typescript', 'Express', 'MySQL'],
+    images: [
+      '/images/projects/bina/image-1.png',
+      '/images/projects/bina/image-2.png',
+      '/images/projects/bina/image-3.png',
+      '/images/projects/bina/image-4.png',
+      '/images/projects/bina/image-5.png',
+      '/images/projects/bina/image-6.png',
+      '/images/projects/bina/image-7.png',
+    ],
+  },
+  {
+    id: '2',
+    name: 'Crowns',
+    description: ``,
+    thumbnail: '/images/projects/crowns/image-1.png',
+    slug: 'crowns',
+    url: '',
+    github: [
+      {
+        label: 'Github',
+        url: '',
+      },
+    ],
+    tech: ['Flutter', 'Laravel', 'MySQL'],
+    images: [
+      '/images/projects/crowns/image-1.png',
+      '/images/projects/crowns/image-2.png',
+      '/images/projects/crowns/image-3.png',
+      '/images/projects/crowns/image-4.png',
+      '/images/projects/crowns/image-5.png',
+      '/images/projects/crowns/image-6.png',
+    ],
+  },
+  {
+    id: '3',
+    name: 'EFL Acad',
+    description: ``,
+    thumbnail: '/images/projects/efl/image-1.png',
+    slug: 'efl-acad',
+    url: '',
+    github: [
+      {
+        label: 'Github',
+        url: '',
+      },
+    ],
+    tech: ['Laravel', 'MySQL'],
+    images: [
+      '/images/projects/efl/image-1.png',
+      '/images/projects/efl/image-2.png',
+      '/images/projects/efl/image-3.png',
+      '/images/projects/efl/image-4.png',
+      '/images/projects/efl/image-5.png',
+      '/images/projects/efl/image-6.png',
+      '/images/projects/efl/image-7.png',
+      '/images/projects/efl/image-8.png',
+      '/images/projects/efl/image-9.png',
+      '/images/projects/efl/image-10.png',
+      '/images/projects/efl/image-11.png',
+    ],
+  },
+  {
+    id: '4',
+    name: 'Exam ITS',
+    description: ``,
+    thumbnail: '/images/projects/exam/image-1.png',
+    slug: 'exam-its',
+    url: '',
+    github: [
+      {
+        label: 'Github',
+        url: '',
+      },
+    ],
+    tech: ['Laravel', 'MySQL'],
+    images: [
+      '/images/projects/exam/image-1.png',
+      '/images/projects/exam/image-2.png',
+      '/images/projects/exam/image-3.png',
+      '/images/projects/exam/image-4.png',
+      '/images/projects/exam/image-5.png',
+      '/images/projects/exam/image-6.png',
+      '/images/projects/exam/image-7.png',
+    ],
+  },
+  {
+    id: '5',
+    name: 'Keuangan Kapal',
+    description: ``,
+    thumbnail: '/images/projects/keuangankapal/image-1.png',
+    slug: 'keuangan-kapal',
+    url: '',
+    github: [
+      {
+        label: 'Github',
+        url: '',
+      },
+    ],
+    tech: ['Laravel', 'MySQL'],
+    images: [
+      '/images/projects/keuangankapal/image-1.png',
+      '/images/projects/keuangankapal/image-2.png',
+      '/images/projects/keuangankapal/image-3.png',
+      '/images/projects/keuangankapal/image-4.png',
+      '/images/projects/keuangankapal/image-5.png',
+      '/images/projects/keuangankapal/image-6.png',
+      '/images/projects/keuangankapal/image-7.png',
+      '/images/projects/keuangankapal/image-8.png',
+    ],
+  },
+  {
+    id: '6',
+    name: 'LKHI UI',
+    description: ``,
+    thumbnail: '/images/projects/lkhiui/image-1.png',
+    slug: 'lkhi-ui',
+    url: '',
+    github: [
+      {
+        label: 'Github',
+        url: '',
+      },
+    ],
+    tech: ['Laravel', 'MySQL'],
+    images: [
+      '/images/projects/lkhiui/image-1.png',
+      '/images/projects/lkhiui/image-2.png',
+      '/images/projects/lkhiui/image-3.png',
+      '/images/projects/lkhiui/image-4.png',
+      '/images/projects/lkhiui/image-5.png',
+      '/images/projects/lkhiui/image-6.png',
+    ],
+  },
+  {
+    id: '7',
+    name: 'PPDB Sidoarjo',
+    description: ``,
+    thumbnail: '/images/projects/ppdb/image-1.png',
+    slug: 'ppdb-sidoarjo',
+    url: '',
+    github: [
+      {
+        label: 'Github',
+        url: '',
+      },
+    ],
+    tech: ['Code Igniter', 'MySQL'],
+    images: [
+      '/images/projects/ppdb/image-1.png',
+      '/images/projects/ppdb/image-2.png',
+      '/images/projects/ppdb/image-3.png',
+    ],
+  },
+  {
+    id: '8',
+    name: 'SI-Band',
+    description: ``,
+    thumbnail: '/images/projects/siband/image-1.jpg',
+    slug: 'si-band',
+    url: '',
+    github: [
+      {
+        label: 'Github',
+        url: '',
+      },
+    ],
+    tech: ['kotlin', 'Firebase'],
+    images: [
+      '/images/projects/siband/image-1.jpg',
+      '/images/projects/siband/image-2.jpg',
+      '/images/projects/siband/image-3.jpg',
+      '/images/projects/siband/image-4.jpg',
+      '/images/projects/siband/image-5.jpg',
+      '/images/projects/siband/image-6.jpg',
+      '/images/projects/siband/image-7.jpg',
+      '/images/projects/siband/image-8.jpg',
+    ],
+  },
+  {
+    id: '9',
+    name: 'SIM-Baret',
+    description: ``,
+    thumbnail: '/images/projects/simbaret/image-1.png',
+    slug: 'sim-baret',
+    url: '',
+    github: [
+      {
+        label: 'Github',
+        url: '',
+      },
+    ],
+    tech: ['Laravel', 'MySQL'],
+    images: [
+      '/images/projects/simbaret/image-1.png',
+      '/images/projects/simbaret/image-2.png',
+      '/images/projects/simbaret/image-3.png',
+      '/images/projects/simbaret/image-4.png',
+      '/images/projects/simbaret/image-5.png',
+      '/images/projects/simbaret/image-6.png',
+    ],
+  },
+  {
+    id: '10',
+    name: 'SI-Monitor',
+    description: ``,
+    thumbnail: '/images/projects/simonitor/image-1.png',
+    slug: 'si-monitor',
+    url: '',
+    github: [
+      {
+        label: 'Github',
+        url: '',
+      },
+    ],
+    tech: ['Laravel', 'MySQL'],
+    images: [
+      '/images/projects/simonitor/image-1.png',
+      '/images/projects/simonitor/image-2.png',
+      '/images/projects/simonitor/image-3.png',
+      '/images/projects/simonitor/image-4.png',
+      '/images/projects/simonitor/image-5.png',
+    ],
+  },
+  {
+    id: '11',
+    name: 'SI-Lock',
+    description: ``,
+    thumbnail: '/images/projects/silock/image-1.jpg',
+    slug: 'si-lock',
+    url: '',
+    github: [
+      {
+        label: 'Github',
+        url: '',
+      },
+    ],
+    tech: ['Flutter', 'Firebase'],
+    images: [
+      '/images/projects/silock/image-1.jpg',
+      '/images/projects/silock/image-2.jpg',
+      '/images/projects/silock/image-3.jpg',
+    ],
+  },
+  {
+    id: '12',
+    name: 'SIWALAN',
+    description: ``,
+    thumbnail: '/images/projects/siwalan/image-1.png',
+    slug: 'siwalan',
+    url: '',
+    github: [
+      {
+        label: 'Github',
+        url: '',
+      },
+    ],
+    tech: ['Laravel', 'flutter', 'MySQL'],
+    images: [
+      '/images/projects/siwalan/image-1.png',
+      '/images/projects/siwalan/image-2.png',
+      '/images/projects/siwalan/image-3.png',
+      '/images/projects/siwalan/image-4.png',
+      '/images/projects/siwalan/image-5.png',
+      '/images/projects/siwalan/image-6.png',
+      '/images/projects/siwalan/image-7.png',
+      '/images/projects/siwalan/image-8.png',
+      '/images/projects/siwalan/image-9.png',
+      '/images/projects/siwalan/image-10.png',
+    ],
+  },
+  {
+    id: '13',
+    name: 'MyITS Presensi',
+    description: ``,
+    thumbnail: '/images/projects/myITSpresensi/image-1.png',
+    slug: 'myits-presensi',
+    url: '',
+    github: [
+      {
+        label: 'Github',
+        url: '',
+      },
+    ],
+    tech: ['Flutter', 'Laravel', 'MySQL'],
+    images: [
+      '/images/projects/myITSpresensi/image-1.png',
+      '/images/projects/myITSpresensi/image-2.png',
+      '/images/projects/myITSpresensi/image-3.png',
+      '/images/projects/myITSpresensi/image-4.png',
+      '/images/projects/myITSpresensi/image-5.png',
+      '/images/projects/myITSpresensi/image-6.png',
+      '/images/projects/myITSpresensi/image-7.png',
+    ],
+  },
+  {
+    id: '14',
+    name: 'Porfolio',
+    description: ``,
+    thumbnail: '',
+    slug: 'portfolio',
+    url: '',
+    github: [
+      {
+        label: 'Github',
+        url: '',
+      },
+    ],
+    tech: ['Next Js', 'Tailwind CSS', 'Typescript'],
+    images: [],
+  },
+  {
+    id: '15',
+    name: 'Galideo',
+    description: ``,
+    thumbnail: '',
+    slug: 'galideo',
+    url: '',
+    github: [
+      {
+        label: 'Github',
+        url: '',
+      },
+    ],
+    tech: ['Next Js', 'Tailwind CSS', 'Typescript'],
+    images: [],
+  },
+  {
+    id: '16',
+    name: 'Murakali',
+    description: ``,
+    thumbnail: '',
+    slug: 'murakali',
+    url: '',
+    github: [
+      {
+        label: 'Github',
+        url: '',
+      },
+    ],
+    tech: [
+      'Next Js',
+      'Tailwind CSS',
+      'Typescript',
+      'Go',
+      'PostgreSQL',
+      'Docker',
+    ],
+    images: [],
+  },
+  {
+    id: '17',
+    name: 'DM Militus',
+    description: ``,
+    thumbnail: '',
+    slug: 'dm-militus',
+    url: '',
+    github: [
+      {
+        label: 'Github',
+        url: '',
+      },
+    ],
+    tech: ['Laravel', 'MySQL', 'Flutter'],
+    images: [],
+  },
+  {
+    id: '18',
+    name: 'Your App',
+    description: ``,
+    thumbnail: '',
+    slug: 'your-app',
+    url: '',
+    github: [
+      {
+        label: 'Github',
+        url: '',
+      },
+    ],
+    tech: ['Flutter', 'Nest Js', 'MongoDB', 'Docker'],
+    images: [],
+  },
+  {
+    id: '19',
+    name: 'Walletoo',
+    description: ``,
+    thumbnail: '',
+    slug: 'walletoo',
+    url: '',
+    github: [
+      {
+        label: 'Github',
+        url: '',
+      },
+    ],
+    tech: ['Flutter', 'Sql Lite'],
+    images: [],
+  },
+];
 
 export default projectDatas;

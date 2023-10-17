@@ -25,7 +25,11 @@ function ProjectCard({ project }: { project: Project }) {
           variants={imageVariants}
           className='absolute left-0 top-0 h-full w-full bg-cover'
           style={{
-            backgroundImage: `url('/images/bg.jpeg')`,
+            backgroundImage: `url('${project.thumbnail}')`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            opacity: 0.5,
           }}
         />
         <motion.div
