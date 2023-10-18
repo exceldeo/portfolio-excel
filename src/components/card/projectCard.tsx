@@ -73,7 +73,7 @@ function ProjectCard({ project }: { project: Project }) {
                     );
                   })}
                 </div>
-                <p className='line-clamp-5 text-ellipsis font-normal text-gray-400'>
+                <p className='line-clamp-5 text-ellipsis font-normal text-white'>
                   {project.description}
                 </p>
               </div>

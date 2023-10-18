@@ -123,12 +123,7 @@ function HeroSection() {
 
   return (
     <section id='home' className=' w-full'>
-      <Particles
-        className='absolute bottom-0 left-0 right-0 top-0 z-0'
-        init={particlesInit}
-        options={particlesOptions}
-      />
-      <div className='flex min-h-screen w-full flex-col justify-center pt-5 md:flex-row '>
+      <div className='flex min-h-screen w-full flex-col justify-center pt-5 md:flex-row'>
         <div className='mx-auto grid content-center px-5 text-center'>
           <div className=''>
             <h1 className='text-4xl font-bold text-white sm:text-7xl'>
@@ -140,18 +135,28 @@ function HeroSection() {
               <span className='text-primary-600'>Mobile Developer</span>
             </h2>
             <div>
-              <Button className='mt-5' variant='dark' isRound={false} size='lg'>
-                <Link
-                  href='https://docs.google.com/document/d/1M6AIYaAkaW-ShBklSt2j6NzuBwhnzxtIta41MeY-UXc/edit?usp=sharing'
-                  target='_blank'
+              <Link
+                href='https://docs.google.com/document/d/1M6AIYaAkaW-ShBklSt2j6NzuBwhnzxtIta41MeY-UXc/edit?usp=sharing'
+                target='_blank'
+              >
+                <Button
+                  className='mt-5'
+                  variant='dark'
+                  isRound={false}
+                  size='lg'
                 >
                   Curriculum Vitae
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </div>
+      <Particles
+        className=' bottom-0 left-0 right-0 top-0 z-0'
+        init={particlesInit}
+        options={particlesOptions}
+      />
     </section>
   );
 }
