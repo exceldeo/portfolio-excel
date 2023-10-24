@@ -75,7 +75,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                           clipRule='evenodd'
                         />
                       </svg>
-                      Github
+                      {github.label}
                     </button>
                   </Link>
                 );

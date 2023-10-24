@@ -73,9 +73,12 @@ function ProjectCard({ project }: { project: Project }) {
                     );
                   })}
                 </div>
-                <p className='line-clamp-5 text-ellipsis font-normal text-white'>
-                  {project.description}
-                </p>
+                <p
+                  className='line-clamp-5 text-ellipsis font-normal text-white'
+                  dangerouslySetInnerHTML={{
+                    __html: project.description,
+                  }}
+                ></p>
               </div>
               {/* <div className='flex justify-center'>
                 {project.github &&

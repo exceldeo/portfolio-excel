@@ -87,6 +87,7 @@ const Carousel = ({
           exit='exit'
           onClick={() => handleImageClick(images[currentIndex])}
           variants={slideVariants}
+          className='max-h-[500px] w-full object-contain'
         />
         <div className='slide_direction'>
           <motion.div

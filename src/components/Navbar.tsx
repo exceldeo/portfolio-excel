@@ -70,7 +70,7 @@ function Navbar({ withBackButton = false }: { withBackButton?: boolean }) {
             </div>
             {withBackButton ? (
               <div
-                onClick={() => router.push('/')}
+                onClick={() => router.back()}
                 className='text-zinc-300 duration-200 hover:text-zinc-100'
               >
                 <ArrowLeft className='h-6 w-6 ' />
