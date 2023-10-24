@@ -4,14 +4,44 @@ const projectDatas: Project[] = [
   {
     id: '1',
     name: 'Bina',
-    description: ``,
+    description: `
+    <p>
+      The <em>"Bina"</em> application represents a pioneering solution that seeks to bridge the gap between small and medium-sized enterprises (SMEs) and experienced mentors. Its core objective is to provide essential knowledge support, enabling SMEs to expand and flourish in a dynamic business landscape.
+    </p>
+    </br>
+    <p>
+      <strong>Key Features:</strong>
+    </p>
+    </br>
+    <ul>
+      <li><strong>Chat:</strong> "Bina" offers a direct communication channel, allowing SMEs to engage in real-time conversations with their mentors, thus fostering a valuable one-on-one interaction.</li>
+      <li><strong>Access to Resources:</strong> The application provides unfettered access to a wealth of resources and materials tailored to each business's specific needs, equipping SMEs with the tools to gain deeper insights into their enterprises.</li>
+      <li><strong>User-Friendly Login:</strong> "Bina" offers an intuitive and secure login system, making it easy for users to access exclusive services and premium content.</li>
+      <li><strong>Notification System:</strong> Users, whether SMEs or mentors, receive timely notifications regarding important communications and relevant resources.</li>
+    </ul>
+    </br>
+    <p>
+      <strong>Technological Backbone:</strong>
+    </p>
+    </br>
+    <p>
+      The development of "Bina" relies on cutting-edge technologies such as <em>Express.js</em>, <em>Next.js</em>, <em>Tailwind</em>, and <em>MySQL</em>, ensuring a seamless and secure user experience.
+    </p>
+    </br>
+    <p>
+      What sets "Bina" apart is its unwavering focus on connecting SMEs with mentors, providing them with an opportunity for invaluable mentorship. The application serves as a tangible effort to advance the SME sector by facilitating meaningful collaboration. As of now, "Bina" may not have specific statistics or achievements to showcase, but it carries immense potential in fostering the growth and prosperity of small businesses.
+    </p>
+    </br>
+    <p>
+      This project stands as a testament to our commitment to supporting small and medium-sized enterprises in their journey towards success. In our portfolio, "Bina" shines as an innovative and promising initiative aimed at fostering entrepreneurship and knowledge-sharing within the SME community.
+    </p>`,
     thumbnail: '/images/projects/bina/image-1.png',
     slug: 'bina',
     url: '',
     github: [
       {
         label: 'Github',
-        url: '',
+        url: 'https://github.com/exceldeo/Bina',
       },
     ],
     tech: ['Next Js', 'Tailwind CSS', 'Typescript', 'Express', 'MySQL'],
@@ -34,8 +64,12 @@ const projectDatas: Project[] = [
     url: '',
     github: [
       {
-        label: 'Github',
-        url: '',
+        label: 'Mobile User',
+        url: 'https://github.com/KeerjainSH/Crowns-mobile',
+      },
+      {
+        label: 'Mobile Tailor',
+        url: 'https://github.com/KeerjainSH/Crowns-tailor-mobile',
       },
     ],
     tech: ['Flutter', 'Laravel', 'MySQL'],
@@ -55,12 +89,7 @@ const projectDatas: Project[] = [
     thumbnail: '/images/projects/efl/image-1.png',
     slug: 'efl-acad',
     url: '',
-    github: [
-      {
-        label: 'Github',
-        url: '',
-      },
-    ],
+    github: [],
     tech: ['Laravel', 'MySQL'],
     images: [
       '/images/projects/efl/image-1.png',
@@ -110,7 +139,7 @@ const projectDatas: Project[] = [
     github: [
       {
         label: 'Github',
-        url: '',
+        url: 'https://github.com/KeerjainSH/Keuangan-Kapal',
       },
     ],
     tech: ['Laravel', 'MySQL'],
@@ -135,7 +164,7 @@ const projectDatas: Project[] = [
     github: [
       {
         label: 'Github',
-        url: '',
+        url: 'https://github.com/Digital-Indonesia-Media/lkihi-ui',
       },
     ],
     tech: ['Laravel', 'MySQL'],
@@ -155,12 +184,7 @@ const projectDatas: Project[] = [
     thumbnail: '/images/projects/ppdb/image-1.png',
     slug: 'ppdb-sidoarjo',
     url: '',
-    github: [
-      {
-        label: 'Github',
-        url: '',
-      },
-    ],
+    github: [],
     tech: ['Code Igniter', 'MySQL'],
     images: [
       '/images/projects/ppdb/image-1.png',
@@ -178,10 +202,10 @@ const projectDatas: Project[] = [
     github: [
       {
         label: 'Github',
-        url: '',
+        url: 'https://github.com/KeerjainSH/si-band',
       },
     ],
-    tech: ['kotlin', 'Firebase'],
+    tech: ['Kotlin', 'Firebase'],
     images: [
       '/images/projects/siband/image-1.jpg',
       '/images/projects/siband/image-2.jpg',
@@ -203,7 +227,7 @@ const projectDatas: Project[] = [
     github: [
       {
         label: 'Github',
-        url: '',
+        url: 'https://github.com/exceldeo/SIM-Baret',
       },
     ],
     tech: ['Laravel', 'MySQL'],
@@ -226,7 +250,7 @@ const projectDatas: Project[] = [
     github: [
       {
         label: 'Github',
-        url: '',
+        url: 'https://github.com/KeerjainSH/si-monitoring-sensor',
       },
     ],
     tech: ['Laravel', 'MySQL'],
@@ -245,12 +269,7 @@ const projectDatas: Project[] = [
     thumbnail: '/images/projects/silock/image-1.jpg',
     slug: 'si-lock',
     url: '',
-    github: [
-      {
-        label: 'Github',
-        url: '',
-      },
-    ],
+    github: [],
     tech: ['Flutter', 'Firebase'],
     images: [
       '/images/projects/silock/image-1.jpg',
@@ -265,13 +284,8 @@ const projectDatas: Project[] = [
     thumbnail: '/images/projects/siwalan/image-1.png',
     slug: 'siwalan',
     url: '',
-    github: [
-      {
-        label: 'Github',
-        url: '',
-      },
-    ],
-    tech: ['Laravel', 'flutter', 'MySQL'],
+    github: [],
+    tech: ['Laravel', 'Flutter', 'MySQL'],
     images: [
       '/images/projects/siwalan/image-1.png',
       '/images/projects/siwalan/image-2.png',
@@ -295,7 +309,7 @@ const projectDatas: Project[] = [
     github: [
       {
         label: 'Github',
-        url: '',
+        url: 'https://github.com/exceldeo/TA-Presensi-FaceRecognition',
       },
     ],
     tech: ['Flutter', 'Laravel', 'MySQL'],
@@ -319,7 +333,7 @@ const projectDatas: Project[] = [
     github: [
       {
         label: 'Github',
-        url: '',
+        url: 'https://github.com/exceldeo/portfolio-excel',
       },
     ],
     tech: ['Next Js', 'Tailwind CSS', 'Typescript'],
@@ -329,17 +343,20 @@ const projectDatas: Project[] = [
     id: '15',
     name: 'Galideo',
     description: ``,
-    thumbnail: '',
+    thumbnail: '/images/projects/galideo/image-2.jpeg',
     slug: 'galideo',
-    url: '',
+    url: 'https://galideo.vercel.app',
     github: [
       {
         label: 'Github',
-        url: '',
+        url: 'https://github.com/exceldeo/galideo',
       },
     ],
     tech: ['Next Js', 'Tailwind CSS', 'Typescript'],
-    images: [],
+    images: [
+      '/images/projects/galideo/image-2.jpeg',
+      '/images/projects/galideo/image-1.jpeg',
+    ],
   },
   {
     id: '16',
@@ -350,8 +367,12 @@ const projectDatas: Project[] = [
     url: '',
     github: [
       {
-        label: 'Github',
-        url: '',
+        label: 'Frontend',
+        url: 'https://github.com/exceldeo/shopee-Murakali-FE-Next',
+      },
+      {
+        label: 'Backend',
+        url: 'https://github.com/exceldeo/shopee-Murakali-BE',
       },
     ],
     tech: [
@@ -371,12 +392,7 @@ const projectDatas: Project[] = [
     thumbnail: '',
     slug: 'dm-militus',
     url: '',
-    github: [
-      {
-        label: 'Github',
-        url: '',
-      },
-    ],
+    github: [],
     tech: ['Laravel', 'MySQL', 'Flutter'],
     images: [],
   },
