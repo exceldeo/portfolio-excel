@@ -101,7 +101,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </div>
 
           <p
-            className='mt-6 text-lg leading-8 text-zinc-300'
+            className='mt-6 text-left text-lg leading-8 text-zinc-300'
             dangerouslySetInnerHTML={{ __html: project.description }}
           ></p>
         </div>
