@@ -4,8 +4,8 @@ import React from 'react';
 import { Project } from '@/types/Project';
 
 const imageVariants = {
-  beforeHover: {},
-  onHover: { scale: 1.4 },
+  beforeHover: { scale: 1, opacity: 0.5 },
+  onHover: { scale: 1.4, opacity: 1 },
 };
 
 const textVariants = {
@@ -30,8 +30,6 @@ function ProjectCard({ project }: { project: Project }) {
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
           }}
-          whileHover={{ opacity: 1 }}
-          initial={{ opacity: 0.5 }}
         />
         <motion.div
           className='
