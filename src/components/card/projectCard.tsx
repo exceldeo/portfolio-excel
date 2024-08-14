@@ -29,7 +29,6 @@ function ProjectCard({ project }: { project: Project }) {
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-            opacity: 0.5,
           }}
         />
         <motion.div
