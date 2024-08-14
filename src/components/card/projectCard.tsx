@@ -30,6 +30,8 @@ function ProjectCard({ project }: { project: Project }) {
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
           }}
+          whileHover={{ opacity: 1 }}
+          initial={{ opacity: 0.5 }}
         />
         <motion.div
           className='
