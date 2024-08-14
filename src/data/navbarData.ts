@@ -1,7 +1,7 @@
 const NAV_ITEMS: NavItem[] = [
   {
     label: 'Projects',
-    page: '/project',
+    page: '#projects',
   },
   {
     label: 'Contact',
