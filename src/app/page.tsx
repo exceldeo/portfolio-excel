@@ -4,6 +4,7 @@ import * as React from 'react';
 import Navbar from '@/components/Navbar';
 
 import HeroSection from '@/sections/home/Hero';
+import ProjectPage from '@/app/project/page';
 
 /**
  * SVGR Support
@@ -28,6 +29,7 @@ export default function HomePage() {
         <HeroSection />
         {/* <EducationSection />
         <ExperienceSection /> */}
+        <ProjectPage />
       </main>
       {/* floating button */}
     </div>
